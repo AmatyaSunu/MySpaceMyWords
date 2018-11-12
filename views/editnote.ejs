@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Note</title>
+     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style media="screen">
+      body {font-family: Arial, Helvetica, sans-serif;}
+      * {box-sizing: border-box;}
+
+      input[type=text], select {
+          display: block;
+          width: 35%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 15px;
+
+      }
+      textarea {
+          display: block;
+          width: 35%;
+          padding: 12px;
+          border: 5px solid #ccc;
+          border-radius: 8px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+          margin-left: auto;
+          margin-right: auto;
+
+      }
+
+       body{
+        background-image: url("http://businessfied.com/wp-content/uploads/2018/07/Windows-10-Wallpaper-7.jpg"); 
+        
+        background-position: justify;
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        margin-top: 20px;
+
+      }
+     .filldiv{
+      font-size: 150%;
+      font-family: Times new Roman;
+      color: white;
+     }
+           .save {
+        background-color: green; /* Blue */
+        border: none;
+        border-radius: 8px;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        position: relative;
+        top:;
+         }
+      </style>
+  </head>
+
+  <body>
+    <form method="post" action="/editnote">
+      <h1 style="margin-top: -50px; font-family: Copper Black; font-size: 300%; text-align: center; color: #FFFF00;">"Your Life is Your Story. Write Well. Edit Often."</h1>
+       <h1 style="margin-top: -50px; font-family: Copper Black; font-size: 300%; text-align: right; color: #FFFF00;">-Susan Statham</h1>
+      <div class="filldiv" name ="note">
+      <center><label for="date"><b>What date is today?</b></label><br></center>
+      <input type="textarea" name="date" id="date"><%= note.date %></input>
+      <center><label for="describe"><b>One word for your day?</b></label><br></center>
+      <input type="textarea" name="describe" id="describe"> <%= note.describe %></input>
+      <textarea name="note" rows="15" cols="120"  placeholder="Pour your heart Here..."  style="background-color: #3ffaf5; font-size:100%; font-family:verdana; align:right;" ><%=note.note %> </textarea></div>
+      <button class="save" type="submit" id = "mybutton" onclick="window.location.href='http://localhost:4000/viewnote'" ><i class="fa fa-save"></i> SAVE </button>
+    </form>
+  </body>
+
+</html>

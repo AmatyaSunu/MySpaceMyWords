@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title><%= title %></title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style media="screen">
+ body{
+
+        background-color: #f5a91a; 
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        margin-top: 10px;
+
+      }
+form {border: 3px solid #f1f1f1;}
+{box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 98%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #e7e7e1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+      	 .save {
+        background-color: #008CBA; /* Blue */
+        border: none;
+        border-radius: 8px;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        margin: 0px 2px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        }
+        .mybutton {
+        background-color: #4CAF50; /* Green */
+      border: none;
+      border-radius: 8px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      margin: 4px 2px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      }
+
+   	    .login {
+    	border-radius: 5px;
+    	background-color: #f2f2f2;
+   		padding: 20px;
+		}
+		
+.container {
+  padding: 16px;
+  margin: 24px 0 12px 0;
+   font-size: 150%;
+   font-family: Times New Roman;
+}
+  
+
+}
+
+	 </style>
+
+</head>
+    <body>
+       	<h1 style="color: Black; font-size: 350%; margin-top: -30px; font-family: Bodoni MT Black; text-align: center;"><%= title %></h1>
+        <h3 style="color: Black; font-size: 230%; font-family: Baskerville Old Face; text-align:center;"> "Reflecting at yourself" </h3>
+        <br><br>
+        	<form style="border:1px solid #ccc" method="post" action="/login">
+        	
+        	<div class="container">
+        	<h1 style="margin-top: -30px;">Please login to your account.</h1>
+		   	<label for="username"><b>Username</b></label>
+		   	<input type="text" placeholder="Enter Username" name="username" required>
+
+		    <label for="password"><b>Password</b></label>
+		    <input type="password" placeholder="Enter Password" name="password" required>
+
+		    <label>
+      		<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    		</label>
+		    <br>
+
+		    <button  class="mybutton" type="submit" id = "button" ><i class="fa fa-heart"></i> LOGIN </button>
+    		
+		   </div>
+		</form> 
+
+		<p style="font-size: 180%"> Don't have an account? </p>
+        <button class="save" onclick="window.location.href='http://localhost:4000/signup'"> <i class="fa fa-home"></i> SIGNUP </a></button>
+      
+    </body>
+
+</html>
